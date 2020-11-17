@@ -1,0 +1,32 @@
+# Set the workflow name
+name: Build and test Mutagen
+
+# Execute the workflow on push events
+on:
+  - push
+
+# Create the workflow jobs
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo 'Hey from Linux!'
+      - run: pwd
+      - run: ls
+      - run: docker --version
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo 'Hey from Windows!'
+      - run: pwd
+      - run: ls
+      - run: docker --version
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo 'Hey from macOS!'
+      - run: pwd
+      - run: ls
