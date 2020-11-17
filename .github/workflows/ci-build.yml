@@ -14,7 +14,8 @@ jobs:
       - run: echo 'Hey from Linux!'
       - run: pwd
       - run: ls
-      - run: docker --version
+      - run: docker version
+      - run: go version
   windows:
     runs-on: windows-latest
     steps:
@@ -22,7 +23,8 @@ jobs:
       - run: echo 'Hey from Windows!'
       - run: pwd
       - run: ls
-      - run: docker --version
+      - run: docker version
+      - run: go version
   macos:
     runs-on: macos-latest
     steps:
@@ -30,3 +32,4 @@ jobs:
       - run: echo 'Hey from macOS!'
       - run: pwd
       - run: ls
+      - run: go version
